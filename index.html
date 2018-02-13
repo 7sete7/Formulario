@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="public/icon.ico">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /><!-- Bootstrap css -->
+    <link rel="stylesheet" href="public/css.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><!-- JQuery -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><!-- Bootstrap js -->
+    <script src="public/js.js"></script>
+
+    <title>Formulário</title>
+  </head>
+
+  <body style="background-color: beige; overflow-x: hidden;">
+
+    <div class="container">
+      <fieldset class="center my-3 border-dark">
+        <legend>Cadastro</legend>
+
+        <div class="container">
+          <div id="form"  class="form-row" style="border: none">
+
+            <!-- Nome -->
+            <div class="form-group col-md-4">
+              <label for="nome" style="margin-left:3px">Insira seu nome</label>
+              <input id="nome" type="text" placeholder="Ex: João" class="form-control" required>
+              <span class="help-block"></span>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group col-md-4">
+              <label for="email" style="margin-left:3px">Insira seu email</label>
+              <input id="email" type="email" placeholder="Ex: dev-leo@J&OSoftware.com" class="form-control" autocomplete="email" required>
+              <span class="help-block"></span>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- Celular -->
+            <div class="form-group col-md-4">
+              <label for="cel" style="margin-left:3px">Celular</label>
+              <div class="input-group">
+                <div class="input-group-addon">+55 (51)</div>
+                <input id="cel" type="number" placeholder="Ex: 999048104" class="form-control" maxlength="9" required>
+              </div>
+              <span class="help-block"></span>
+            </div>
+
+            <!-- Telefone -->
+            <div class="form-group col-md-4">
+              <label for="tel" style="margin-left:3px">Telefone
+                <small class="text-muted"> (Opcional)</small>
+              </label>
+              <div class="input-group">
+                <div class="input-group-addon">+55 (51)</div>
+                <input id="tel" type="number" placeholder="Ex: 12345678" maxlength="8" class="form-control">
+              </div>
+              <span class="help-block"></span>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- Contato via whats -->
+            <div class="form-group col-md-12 radios mt-2">
+              <p>Deseja contato via Whatsapp?</p><br>
+
+              <label class="text-noBold">
+                <input id="sim" type="radio" name="wats-radio" checked> Sim
+              </label><br />
+
+              <label class="text-noBold">
+                <input id="nao" type="radio" name="wats-radio"> Não
+              </label>
+            </div>
+
+            <hr>
+            <div class="clearfix"></div>
+
+            <!-- Estado -->
+            <div class="form-group col-md-4" id="divEstado">
+              <label for="selectEstado">Selecione seu estado</label><br />
+              <select id="estado" class="form-control">
+                <optgroup label="Estados"></optgroup>
+              </select>
+            </div>
+
+            <!-- Cidade -->
+            <div class="form-group col-md-4">
+              <label for="cidade">Insira sua cidade</label>
+              <input id="cidade" type="text" class="form-control" placeholder="Ex: Gravataí" autocomplete="address-level2" required>
+              <span class="help-block"></span>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- Mensagem -->
+            <div class="form-group col-md-8">
+              <label for="mensagem">Sua mensagem</label>
+              <textarea id="mensagem" class="form-control" rows="5" placeholder="Ex: Lorem ipsum dolor sit amet..." required></textarea>
+              <span class="help-block"></span>
+            </div>
+
+          </div>
+        </div>
+        <button class="btn btn-success pull-right enviar">Enviar</button>
+      </fieldset>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" aria-hidden="true" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-header">
+          <h2 class="modal-title" style="color:gray">Successo!
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      				<span aria-hidden="true">&times;</span>
+      			</button>
+          </h2>
+        </div>
+
+        <div class="modal-body text-center" style="font-size:13pt;">
+          <p>Formulário enviado com successo!</p>
+          <p>(Cheque o console!)</p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
